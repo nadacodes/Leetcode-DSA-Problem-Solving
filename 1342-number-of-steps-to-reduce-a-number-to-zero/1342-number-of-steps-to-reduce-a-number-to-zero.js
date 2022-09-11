@@ -3,25 +3,21 @@
  * @return {number}
  */
 var numberOfSteps = function(num) {
-    let count=0;
-    if(num==0)
-    {
+  
+    if(num==0){
        return 0;
     }
     
+    let count=0; 
+    
     while(true){
-    if(num%2==0){   
-        num=num/2; 
-        count++;
-    }
-    else{
-      num--;
-      count++;
-    }
+        
+    num%2==0? num=num/2:num--;
+    count++;   
         
     if(num==0){
        return count;
       }
+        
     }
-    
 };
